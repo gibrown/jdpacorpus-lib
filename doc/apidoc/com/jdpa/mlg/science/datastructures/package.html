@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>Scaladoc for com.jdpa.mlg.science.datastructures</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		      <script type="text/javascript" src="../../../../../lib/jquery.js"></script>
+          
+      <link href="../../../../../lib/template.css" rel="stylesheet" type="text/css" media="screen" />
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+
+      <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.jdpa">jdpa</a>.<a href="../../package.html" class="extype" name="com.jdpa.mlg">mlg</a>.<a href="../package.html" class="extype" name="com.jdpa.mlg.science">science</a></p>
+
+      <div id="definition">
+        <img src="../../../../../lib/package_big.png" />
+        <h1>datastructures</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol">
+        <span class="name">datastructures</span>
+      </span>
+      </h4>
+      <div class="fullcomment" id="comment"></div>
+      
+      <div id="template">
+
+        <div id="mbrsel">
+          
+          <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in">Public</li><li class="all out">All</li></ol>
+          </div>
+        </div>
+        
+                
+        
+        <div class="members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Anchor">
+      <h4 class="signature"><a href="Anchor.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Anchor</span><span class="result"> extends Element</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.CoReferenceGroup">
+      <h4 class="signature"><a href="CoReferenceGroup.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">CoReferenceGroup</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The container class for a group of anchors in the text linking a series of topics or subtopics together.</p>
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Committer">
+      <h4 class="signature"><a href="Committer.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Committer</span><span class="result"> extends Modifier</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Comparison">
+      <h4 class="signature"><a href="Comparison.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Comparison</span><span class="result"> extends Element with ModifierTarget</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.ComparisonDimension">
+      <h4 class="signature"><a href="ComparisonDimension.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">ComparisonDimension</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.DependencyNodeToken">
+      <h4 class="signature"><a href="DependencyNodeToken.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">DependencyNodeToken</span><span class="result"> extends DependencyParseNode</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.DependencyParseNode">
+      <h4 class="signature"><a href="DependencyParseNode.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">DependencyParseNode</span><span class="result"> extends Log</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.DependencyParseTree">
+      <h4 class="signature"><a href="DependencyParseTree.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">DependencyParseTree</span><span class="result"> extends MetaData with Log</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Descriptor">
+      <h4 class="signature"><a href="Descriptor.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Descriptor</span><span class="result"> extends Element</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Document">
+      <h4 class="signature"><a href="Document.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Document</span><span class="result"> extends MetaData with Log</span>
+      </span>
+      </a></h4>
+      <p class="comment cmt">The Class Document contains all the information about a particular document including
+all of the results from tokenization, parsing, POS tagging, sentiment, entities, etc
+</p>
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Element">
+      <h4 class="signature"><a href="Element.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Element</span><span class="result"> extends SpanSequence with MetaData with Log</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: abstract 
+        </div></div>
+          
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Entity">
+      <h4 class="signature"><a href="Entity.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Entity</span><span class="result"> extends MetaData with Log</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Intensifier">
+      <h4 class="signature"><a href="Intensifier.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Intensifier</span><span class="result"> extends Modifier</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Invisible">
+      <h4 class="signature"><a href="Invisible.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Invisible</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: abstract 
+        </div></div>
+          
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Mention">
+      <h4 class="signature"><a href="Mention.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Mention</span><span class="result"> extends Element with ModifierTarget with ComparisonDimension</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.MetaData">
+      <h4 class="signature"><a href="MetaData.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">MetaData</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Modifier">
+      <h4 class="signature"><a href="Modifier.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Modifier</span><span class="result"> extends Element with ModifierTarget with ModifierParent with OPOTarget</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: abstract 
+        </div></div>
+          
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.ModifierParent">
+      <h4 class="signature"><a href="ModifierParent.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">ModifierParent</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.ModifierTarget">
+      <h4 class="signature"><a href="ModifierTarget.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">ModifierTarget</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Negator">
+      <h4 class="signature"><a href="Negator.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Negator</span><span class="result"> extends Modifier</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Neutralizer">
+      <h4 class="signature"><a href="Neutralizer.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Neutralizer</span><span class="result"> extends Modifier</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.NounToken">
+      <h4 class="signature"><a href="NounToken.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">NounToken</span><span class="result"> extends Token</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.OPO">
+      <h4 class="signature"><a href="OPO.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">OPO</span><span class="result"> extends Element with ModifierParent with OPOTarget with ModifierTarget</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.OPOTarget">
+      <h4 class="signature"><a href="OPOTarget.html">
+      <span class="kind">trait</span>
+      <span class="symbol">
+        <span class="name">OPOTarget</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.ProbLink">
+      <h4 class="signature"><a href="ProbLink.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">ProbLink</span><span class="tparams">[<span name="R">R</span>, <span name="T">T</span>]</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Root">
+      <h4 class="signature"><a href="Root.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Root</span><span class="result"> extends Invisible with DependencyParseNode</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Sentence">
+      <h4 class="signature"><a href="Sentence.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Sentence</span><span class="result"> extends SpanSequence</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.SentimentExpression">
+      <h4 class="signature"><a href="SentimentExpression.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">SentimentExpression</span><span class="result"> extends Element with ModifierTarget with OPOTarget with ComparisonDimension</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.SentimentIOBRepresentation">
+      <h4 class="signature"><a href="SentimentIOBRepresentation.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">SentimentIOBRepresentation</span><span class="result"> extends Log</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Span">
+      <h4 class="signature"><a href="Span.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Span</span><span class="result"> extends HasWord</span>
+      </span>
+      </a></h4>
+      
+            
+            <div class="fullcomment"><div class="block">
+          attributes: abstract 
+        </div></div>
+          
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.SpanSequence">
+      <h4 class="signature"><a href="SpanSequence.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">SpanSequence</span><span class="result"> extends Iterable[Span] with Log</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Token">
+      <h4 class="signature"><a href="Token.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">Token</span><span class="result"> extends Span with MetaData</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.VerbToken">
+      <h4 class="signature"><a href="VerbToken.html">
+      <span class="kind">class</span>
+      <span class="symbol">
+        <span class="name">VerbToken</span><span class="result"> extends Token</span>
+      </span>
+      </a></h4>
+      
+    </li></ol>
+            </div>
+        
+        <div class="members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="com.jdpa.mlg.science.datastructures.AnchorType">
+      <h4 class="signature"><a href="AnchorType$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">AnchorType</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.AnnotationSourceType">
+      <h4 class="signature"><a href="AnnotationSourceType$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">AnnotationSourceType</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.CoReferenceGroup">
+      <h4 class="signature"><a href="CoReferenceGroup$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">CoReferenceGroup</span><span class="result"> extends Log</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.DependencyRelationType">
+      <h4 class="signature"><a href="DependencyRelationType$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">DependencyRelationType</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.Document">
+      <h4 class="signature"><a href="Document$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">Document</span><span class="result"> extends AnyRef</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.EntityRelationType">
+      <h4 class="signature"><a href="EntityRelationType$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">EntityRelationType</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.GenderType">
+      <h4 class="signature"><a href="GenderType$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">GenderType</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.IntensifierDirection">
+      <h4 class="signature"><a href="IntensifierDirection$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">IntensifierDirection</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.POS">
+      <h4 class="signature"><a href="POS$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">POS</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.SentimentIntensity">
+      <h4 class="signature"><a href="SentimentIntensity$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">SentimentIntensity</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.SentimentPolarity">
+      <h4 class="signature"><a href="SentimentPolarity$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">SentimentPolarity</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.TokenProperty">
+      <h4 class="signature"><a href="TokenProperty$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">TokenProperty</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.VerbAspectType">
+      <h4 class="signature"><a href="VerbAspectType$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">VerbAspectType</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li><li visbl="pub" name="com.jdpa.mlg.science.datastructures.VerbTenseType">
+      <h4 class="signature"><a href="VerbTenseType$.html">
+      <span class="kind">object</span>
+      <span class="symbol">
+        <span class="name">VerbTenseType</span><span class="result"> extends Enumeration with SmartEnum</span>
+      </span>
+      </a></h4>
+      
+    </li></ol>
+            </div>
+                
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>

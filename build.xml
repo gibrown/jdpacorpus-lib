@@ -1,0 +1,118 @@
+<project name="jdpacorpus-lib" default="archive">
+
+    <!-- Uses the conventions specified in http://techtracer.com/2007/04/16/the-great-ant-tutorial-a-great-jump-start/ -->
+
+    <property name="projectname" value ="jdpacorpus-lib"/>
+    <property name="src.dir"  value="${basedir}/src"/>
+    <property name="classes.dir"  value="${basedir}/classes"/>
+    <property name="bin.dir"  value="${basedir}/bin"/>
+    <property name="lib.dir"  value="${basedir}/lib"/>
+    <property name="config.dir"  value="${basedir}/config"/>
+    <property name="thirdparty.dir" value="${basedir}/thirdparty"/>
+    <property name="com.dir" value="${thirdparty.dir}/commercial"/>
+    <property name="academ.dir" value="${thirdparty.dir}/academic"/>
+    <property name="gpl.dir" value="${thirdparty.dir}/gpl"/>
+    <property name="scala.dir" value="${thirdparty.dir}/scala/scala-2.8.0.final"/>
+    <property name="apidoc.dir" value="${basedir}/doc/apidoc"/>
+
+    <taskdef resource="scala/tools/ant/antlib.xml">
+      <classpath>
+        <pathelement location="${scala.dir}/lib/scala-compiler.jar"   />
+        <pathelement location="${scala.dir}/lib/scala-library.jar"   />
+      </classpath>
+    </taskdef>
+
+	  <!--fileset id="thirdparty.noncom.lib.files" dir="${thirdparty.dir}">
+    </fileset--> 
+
+    <fileset id="thirdparty.com.lib.files" dir="${com.dir}">
+      <include name="log4j/apache-log4j-1.2.15/log4j-1.2.15.jar"/>
+      <include name="slf4j-1.6.0/slf4j-api-1.6.0.jar"/>
+      <include name="slf4j-1.6.0/slf4j-log4j12-1.6.0.jar"/>
+      <include name="junit-4.8.2.jar"/>
+      <!--include name="stanford-parser-2010-08-20/stanford-parser.jar"/-->
+      <include name="commons-cli-1.2/commons-cli-1.2.jar"/>
+    </fileset> 
+
+    <fileset id="thirdparty.gpl.lib.files" dir="${gpl.dir}">
+      <include name="stanford-parser-2010-08-20/stanford-parser.jar"/>
+      <include name="opennlp-tools-1.5.0/opennlp-tools-1.5.0.jar"/>
+      <include name="opennlp-tools-1.5.0/lib/maxent-3.0.0.jar"/>
+      <include name="opennlp-tools-1.5.0/lib/jwnl-1.3.3.jar"/>
+    </fileset> 
+	
+    <path id="library.path">
+      <!--fileset refid="thirdparty.noncom.lib.files"/-->
+      <fileset refid="thirdparty.com.lib.files"/>
+      <fileset refid="thirdparty.gpl.lib.files"/>
+      <pathelement location="${scala.dir}/lib/scala-library.jar"   />    	
+      <pathelement location="${classes.dir}"   />
+      <pathelement location="${config.dir}"   />
+    </path>
+
+    <target name="clean">
+        <delete dir="${classes.dir}" quiet="true"/>
+    </target>
+
+    <target name="compile">
+      <!--echo message="${scala.dir}/lib/scala-library.jar"/-->
+      <property name="classstr" refid="library.path"/>
+      <echo message="${classstr}"/>
+      <mkdir dir="${classes.dir}"/>
+      <!--compiler needs more stack space-->
+      <property name="env.JAVAOPTS" value="-J-Xmx512m"/>
+      <scalac srcdir="${src.dir}"
+              destdir="${classes.dir}"
+              classpathref="library.path">  
+      </scalac>
+      <javac srcdir="${src.dir}"
+              destdir="${classes.dir}"
+              classpathref="library.path">
+      </javac>
+    </target>
+
+    <target name="apidocs" depends="compile">
+      <property name="env.JAVAOPTS" value="-J-Xmx1g"/>
+      <scaladoc srcdir="${src.dir}"
+          destdir="${apidoc.dir}"
+          classpathref="library.path"
+          doctitle="JDPA Corpus Library"/>
+    </target>
+	
+    <target name="jar" depends="compile">
+      <jar destfile="${basedir}/jdpacorpus-lib.jar"
+           basedir="${classes.dir}"
+           excludes="**/*Test.class **/mlg/science/tests/*">
+        <!--fileset refid="${thirdparty.com.lib.files}"/-->
+      </jar>
+    </target>
+
+    <target name="archive" depends="jar,apidocs"/>		  	
+	
+    <target name="run">
+      <property name="classstr" refid="library.path"/>
+      <echo message="${classes.dir}"/>
+      <echo message="${classstr}"/>
+      <java 
+      	fork="yes" 
+      	classname="${CLASS}"
+        dir="${basedir}/../"
+      	>
+          <classpath refid="library.path" />
+    	    <arg line="${ARGS}"/>
+    	</java>
+    </target>
+
+	  <target name="test">
+	    <junit 
+	    	fork="yes" 
+	    	printsummary="on"
+	    	dir="${basedir}/../"
+	  	>
+	      <test name="com.jdpa.mlg.science.tests.AllTests" />
+	      <formatter type="plain" usefile="false" />
+	      <classpath refid="library.path" />
+	    </junit>
+	  </target>
+
+</project>

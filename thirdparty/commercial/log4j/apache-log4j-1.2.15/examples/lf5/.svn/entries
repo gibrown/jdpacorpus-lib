@@ -1,0 +1,86 @@
+10
+
+dir
+37188
+svn://dev-vm-subversion.apps.umbriacom.com/svn/repository/trunk/science/thirdparty/commercial/log4j/apache-log4j-1.2.15/examples/lf5
+svn://dev-vm-subversion.apps.umbriacom.com/svn/repository
+
+
+
+2010-06-18T15:44:38.915882Z
+36656
+gregory_brown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ae864b96-7dfe-0310-8859-d143023f295d
+
+UsingLogMonitorAdapter
+dir
+
+UsingSocketAppenders
+dir
+
+InitUsingDefaultConfigurator
+dir
+
+OpeningLogFiles
+dir
+
+InitUsingLog4JProperties
+dir
+
+InitUsingPropertiesFile
+dir
+
+InitUsingMultipleAppenders
+dir
+
+InitUsingXMLPropertiesFile
+dir
+
+index.html
+file
+
+
+
+
+2010-06-16T00:45:26.065000Z
+f5aaf15f5a43a3445700641e249de7ca
+2010-06-18T15:44:38.915882Z
+36656
+gregory_brown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1044
+
